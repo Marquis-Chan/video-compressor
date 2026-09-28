@@ -1,0 +1,42 @@
+视频压缩工具箱 v1.5.0 - Third-party notices
+
+This application is distributed for small-group internal use. It bundles or
+depends on the following third-party software. Keep this file, README.txt,
+the licenses directory, and BUILD_MANIFEST.txt with every build.
+
+1. Qt for Python / PySide6-Essentials
+   Windows lock: 6.11.1.
+   Project: https://doc.qt.io/qtforpython-6/
+   License: LGPLv3/GPLv3/commercial options; the build copies every file from
+   the installed PySide6_Essentials and shiboken6 distributions into the
+   delivery's licenses directory.
+   Package metadata and the copied texts are inventoried at build time.
+   See also https://www.qt.io/licensing/.
+   Qt libraries remain dynamically linked inside the application bundle.
+
+2. FFmpeg 8.1 essentials build (Windows development asset)
+   Source/build provider: https://www.gyan.dev/ffmpeg/builds/
+   The included build reports GPLv3 configuration and includes libx264.
+   License and corresponding-source information:
+   https://ffmpeg.org/legal.html and https://ffmpeg.org/download.html
+   Each release records the ffmpeg/ffprobe version, configuration, `-L`
+   license output, pre-signing input SHA256, upstream source location, and
+   binary provider source location in licenses/FFMPEG_LICENSE_AND_SOURCE.txt.
+   BUILD_MANIFEST.txt records the authoritative final delivered SHA256 after
+   platform signing.
+3. PyInstaller 6.21.0 (build-time only)
+   Project: https://pyinstaller.org/
+   License: GPLv2 with an exception permitting distribution of bundled apps.
+   The installed distribution's license files are copied into the delivery at
+   build time.
+
+4. psutil 7.2.2 (Windows build only)
+   Project: https://github.com/giampaolo/psutil
+   License: BSD-3-Clause.
+   Used on Windows to pause and resume the active FFmpeg process. The installed
+   distribution's license text is copied into the delivery at build time.
+
+No build script downloads or installs dependencies. This notice is not a
+substitute for legal advice. Public distribution must complete a license
+review, retain all required license texts and source offers, and use Windows
+code signing.

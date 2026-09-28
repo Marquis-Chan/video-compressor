@@ -1,0 +1,16 @@
+# Build output and downloadable bundle
+/dist/
+/build/
+# Bundled development runtimes and third-party executables
+/python/
+/ffmpeg/
+**/__pycache__/
+**/.pytest_cache/
+*.py[cod]
+*.spec
+*.log
+*.tmp
+.venv/
+venv/
+.env
+!.env.example

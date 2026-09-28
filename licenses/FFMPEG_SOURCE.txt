@@ -1,0 +1,38 @@
+FFmpeg source and license information
+
+Upstream project: https://ffmpeg.org/
+Upstream source: https://ffmpeg.org/download.html
+License information: https://ffmpeg.org/legal.html
+
+Windows binary provider: https://www.gyan.dev/ffmpeg/builds/
+Windows provider source packages: https://www.gyan.dev/ffmpeg/builds/#sources
+
+macOS arm64 bundled inputs
+--------------------------
+Version: FFmpeg 8.0
+Upstream corresponding source:
+https://ffmpeg.org/releases/ffmpeg-8.0.tar.xz
+Original binary provider URL: unavailable
+Acquisition record: locally supplied prebuilt arm64 binaries already present
+on the build Mac. They were not downloaded by this project or its build
+scripts. This record deliberately does not attribute them to Homebrew,
+Evermeet, or another provider without evidence.
+
+Pre-signing input SHA256:
+ffmpeg  77d2c853f431318d55ec02676d9b2f185ebfdddb9f7677a251fbe453affe025a
+ffprobe babf170e86bd6b0b2fefee5fa56f57721b0acb98ad2794b095d8030b02857dfe
+
+Both inputs are arm64 Mach-O executables with macOS 12.0 minimum load
+commands. Their runtime version, configuration and license output are captured
+again in each built application's licenses/FFMPEG_LICENSE_AND_SOURCE.txt.
+
+The bundled binaries must report their applicable license with `ffmpeg -L`
+and `ffprobe -L`. The build scripts append that output, the exact version and
+configuration, and pre-signing input SHA256 values to
+FFMPEG_LICENSE_AND_SOURCE.txt. BUILD_MANIFEST.txt records the authoritative
+SHA256 of every final delivered file after platform signing.
+
+Public distribution remains blocked until the exact original macOS binary
+provider is known and all corresponding-source obligations have been reviewed.
+The current record is intended only for the approved small-group internal
+delivery.
