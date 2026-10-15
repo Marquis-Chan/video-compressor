@@ -1,42 +1,42 @@
-视频压缩工具箱 v1.5.0 - Third-party notices
+Video Compressor Toolbox v1.5.0 — public Windows edition
 
-This application is distributed for small-group internal use. It bundles or
-depends on the following third-party software. Keep this file, README.txt,
-the licenses directory, and BUILD_MANIFEST.txt with every build.
+Original application code, icons and documentation: MIT License, copyright
+2026 Marquis-Chan. See LICENSE. Third-party components retain their licenses.
 
-1. Qt for Python / PySide6-Essentials
-   Windows lock: 6.11.1.
-   Project: https://doc.qt.io/qtforpython-6/
-   License: LGPLv3/GPLv3/commercial options; the build copies every file from
-   the installed PySide6_Essentials and shiboken6 distributions into the
-   delivery's licenses directory.
-   Package metadata and the copied texts are inventoried at build time.
-   See also https://www.qt.io/licensing/.
-   Qt libraries remain dynamically linked inside the application bundle.
+The public portable edition excludes ffmpeg.exe and ffprobe.exe. Install a
+separate FFmpeg build and comply with that build's license when redistributing
+it. The developer's existing bundled-toolchain build is a separate artifact;
+its bundled FFmpeg/source requirements must be assessed for that delivery.
 
-2. FFmpeg 8.1 essentials build (Windows development asset)
-   Source/build provider: https://www.gyan.dev/ffmpeg/builds/
-   The included build reports GPLv3 configuration and includes libx264.
-   License and corresponding-source information:
-   https://ffmpeg.org/legal.html and https://ffmpeg.org/download.html
-   Each release records the ffmpeg/ffprobe version, configuration, `-L`
-   license output, pre-signing input SHA256, upstream source location, and
-   binary provider source location in licenses/FFMPEG_LICENSE_AND_SOURCE.txt.
-   BUILD_MANIFEST.txt records the authoritative final delivered SHA256 after
-   platform signing.
-3. PyInstaller 6.21.0 (build-time only)
-   Project: https://pyinstaller.org/
-   License: GPLv2 with an exception permitting distribution of bundled apps.
-   The installed distribution's license files are copied into the delivery at
-   build time.
+1. Qt / Qt for Python (PySide6-Essentials and shiboken6 6.11.1)
+   Copyright The Qt Company Ltd. and other contributors.
+   The public application uses the open-source LGPLv3 option. Qt libraries
+   remain dynamically linked and are not encrypted or restricted from replacement.
+   You may modify/replace these libraries and reverse engineer this application
+   to debug such modifications as allowed by the LGPL. No additional restriction
+   on those rights is imposed by this project.
+   Full LGPLv3 and GPLv3 texts are in licenses/LGPL-3.0.txt and GPL-3.0.txt.
+   Any upstream commercial-license notice retained from the wheel is an alternate
+   upstream licensing option, not a restriction on the LGPL option selected here.
+   Source and version records: licenses/SOURCE_ACCESS.md.
+   https://doc.qt.io/qtforpython-6/ and https://www.qt.io/licensing/
 
-4. psutil 7.2.2 (Windows build only)
-   Project: https://github.com/giampaolo/psutil
-   License: BSD-3-Clause.
-   Used on Windows to pause and resume the active FFmpeg process. The installed
-   distribution's license text is copied into the delivery at build time.
+2. Python 3.12.8
+   Copyright Python Software Foundation and contributors.
+   PSF License and incorporated historical/component notices are included in
+   licenses/PYTHON-LICENSE.txt. Corresponding source is linked in SOURCE_ACCESS.md.
 
-No build script downloads or installs dependencies. This notice is not a
-substitute for legal advice. Public distribution must complete a license
-review, retain all required license texts and source offers, and use Windows
-code signing.
+3. psutil 7.2.2
+   BSD-3-Clause. Used for pause/resume on Windows. The original license is copied
+   from the installed distribution to the versioned licenses/ directory.
+   https://github.com/giampaolo/psutil
+
+4. PyInstaller 6.21.0 (build tool)
+   GPLv2 with its bootloader exception permitting distribution of bundled apps.
+   The original license and exception are copied from the installed distribution.
+   https://pyinstaller.org/
+
+Package license files and a SHA256 delivery manifest accompany the portable ZIP.
+Preserve these notices when redistributing. Source access for the exact public
+release is documented in licenses/SOURCE_ACCESS.md, including official archives
+for Qt, Qt for Python, Python, psutil and PyInstaller.
